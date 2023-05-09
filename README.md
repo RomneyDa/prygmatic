@@ -2,6 +2,11 @@
 
 Open-source python framework for Vercel serverless functions
 
+Opinionated dev stack:
+
+- Poetry package manager
+- Wraps pytest for testing
+
 Goals:
 
 - Builds api from simple decorators
