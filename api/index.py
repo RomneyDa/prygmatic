@@ -1,8 +1,10 @@
-
-
+import os
 from sanic import Sanic, response
 from dotenv import load_dotenv
 load_dotenv()
+
+ex = os.environ.get("EXAMPLE_ENV")
+print(ex)
 
 app: Sanic = Sanic("app_name")
 
@@ -10,16 +12,14 @@ app: Sanic = Sanic("app_name")
 # async def home(request):
 #    return response.text("Hello Sanic")
  
-@app.route('/')
-@app.route('/<path:path>')
-async def index(request, path=""):
-    return response.json({'hello': path})
-
-
 # @app.route('/')
 # @app.route('/<path:path>')
 # async def index(request, path=""):
-#     return json({'hello': path})
+#     return response.json({'hello': path})
+
+@app.get('/api/example')
+async def example(request):
+    return response.json({"hello": "world"})
 
 
 # NON SANIC APPROACH
