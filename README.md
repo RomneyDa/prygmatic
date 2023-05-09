@@ -17,6 +17,7 @@ Goals:
 - Testing support as a set of network/other utilities that wrap around pytest and/or unittest
 - Simple example endpoints/utils for all ^ with accompanying tests
 - Async examples
+- Come up with a better name related to the chosen ASGI framework
 
 Vercel support a python runtime. [DOCS](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python). As of this writing, Vercel supports Python 3.6 and Python 3.9.
 
